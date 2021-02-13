@@ -8,6 +8,7 @@ gradle/
 gradle.properties
 gradlew
 gradlew.bat
+*.gradle
 
 ### STS ###
 .apt_generated
