@@ -77,7 +77,6 @@ public class MyLinkedList {
 
     /** Delete the index-th node in the linked list, if the index is valid. */
     public void deleteAtIndex(int index) {
-
         if (index > getLastIndex() || index < 0) return;
 
         if (index == getLastIndex()) {
@@ -88,8 +87,6 @@ public class MyLinkedList {
             removeFirst();
             return;
         }
-
-        // 1 [2] 3
 
         Node result = firstNode;
         for (int i = 0; i < index; i++) {
@@ -113,31 +110,6 @@ public class MyLinkedList {
             lastNode = lastNode.prev;
             size--;
         }
-    }
-
-
-    public static void main(String[] args) {
-        MyLinkedList obj = new MyLinkedList(); // null
-        obj.addAtHead(7);
-        obj.addAtHead(2);
-        obj.addAtHead(1);
-
-        obj.addAtIndex(3, 0); // 1 2 7 0
-
-        obj.deleteAtIndex(2);
-
-        obj.addAtHead(6);
-
-        obj.addAtTail(4);
-
-        obj.get(4); // 6 1 2 0 4
-
-        obj.addAtHead(4);
-
-        obj.addAtIndex(5, 0);
-
-        obj.addAtHead(6);
-
     }
 }
 
